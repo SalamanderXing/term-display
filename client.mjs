@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
 
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket(`ws://${process.argv[2]}:8080`);
 
 ws.on('open', function open() {
   console.log('connected');
