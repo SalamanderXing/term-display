@@ -44,7 +44,7 @@ const sshPipe = async (socket) => {
 
 		if (isTTY && stdin.setRawMode) stdin.setRawMode(true);
 
-		stream.pipe(stdout);
+		// stream.pipe(stdout);
 		stream.pipe(socket);
 		stream.stderr.pipe(stderr);
 		stdin.pipe(stream);
